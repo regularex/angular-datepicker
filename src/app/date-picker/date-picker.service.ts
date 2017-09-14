@@ -15,7 +15,7 @@ export class DatePickerService {
   private defaultConfig: IDatePickerConfig = {
     closeOnSelect: true,
     closeOnSelectDelay: 100,
-    format: 'DD-MM-YYYY',
+    format: 'YYYY-MM-DD',
     onOpenDelay: 0,
     disableKeypress: false,
     showNearMonthDays: true,
@@ -127,9 +127,9 @@ export class DatePickerService {
   private getDefaultFormatByMode(mode: CalendarMode): string {
     switch (mode) {
       case 'day':
-        return 'DD-MM-YYYY';
+        return 'YYYY-MM-DD';
       case 'daytime':
-        return 'DD-MM-YYYY HH:mm:ss';
+        return 'YYYY-MM-DD HH:mm';
       case 'time':
         return 'HH:mm:ss';
       case 'month':
